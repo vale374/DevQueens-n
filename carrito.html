@@ -24,24 +24,65 @@
     </nav>
   </header>
 
-  <section class="gallery container">
-    <h2>Galería de Experiencias</h2>
-    <p>Así se viven los mejores momentos en <strong>Coffee with Art</strong>.</p>
+  <style>
+    /* Estilos internos adicionales por si los necesitas */
+    .botones {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
 
-    <div class="gallery-grid">
-      <img src="img/68957398-children-painting-pottery-at-a-workshop-organized-by-the-international-children-s-day-in-timisoara.jpg" alt="Persona pintando cerámica">
-      <img src="img/pareja.jpg" alt="Pareja en Coffee with Art">
-      <img src="img/amigos.jpg" alt="Amigos disfrutando café">
-      <img src="img/niños.webp" alt="Niños pintando">
-      <img src="img/ter.jpg" alt="Cerámica terminada">
-      <img src="img/brunch.jpg" alt="Brunch con arte">
+    .botones button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #d6b3f8;
+      color: #4c0070;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .botones button:hover {
+      background-color: #c89af5;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="carrito">
+    <h2>🛒 Tu Carrito de Compras</h2>
+
+    <div class="item">
+      <span class="nombre">Cuaderno rayado x3</span>
+      <span class="precio">$15.000</span>
+    </div>
+
+    <div class="item">
+      <span class="nombre">Esferos de colores (pack)</span>
+      <span class="precio">$9.000</span>
+    </div>
+
+    <div class="item">
+      <span class="nombre">Carpeta A-Z</span>
+      <span class="precio">$7.000</span>
+    </div>
+
+    <div class="total">
+      <strong>Total: $31.000</strong>
+    </div>
+
+    <div class="botones">
+      <button>Vaciar Carrito</button>
+      <button>Finalizar Compra</button>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Coffee with Art — Valeria Quintero Vélez</p>
-  </footer>
 </body>
 </html>
+  <script src="carrito.js"></script>
+</body>
+</html>
+
 
 
