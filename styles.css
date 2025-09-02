@@ -1,0 +1,380 @@
+/* =========================================
+   Coffee with Art - Estilos Generales
+   Creado por Valeria Quintero Vélez
+   ========================================= */
+
+/* ===== Variables ===== */
+:root {
+  --lila: #cdb4db;
+  --rosado: #ffc8dd;
+  --rosa-intenso: #ffafcc;
+  --azul: #bde0fe;
+  --celeste: #a2d2ff;
+  --blanco: #000000;
+  --texto: #000000;
+  --fuente-principal: 'Poppins', sans-serif;
+  --fuente-titulos: 'Edu NSW ACT Cursive', cursive;
+}
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background: var(--lila);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* Títulos y logo con fuente artística */
+h1, h2, h3, .logo {
+  font-family: var(--fuente-titulos);
+}
+
+/* ===== CONTAINERS ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--rosa-intenso);
+  padding: 15px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--blanco);
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--blanco);
+  transition: color 0.3s;
+}
+.menu a:hover { color: var(--celeste); }
+.menu a.active { border-bottom: 2px solid var(--celeste); }
+
+/* ===== HERO (Inicio) ===== */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--rosado), var(--azul));
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--blanco);
+  margin-bottom: 15px;
+}
+.hero p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  margin: 0 auto 20px auto;
+  color: var(--blanco);
+}
+.btn {
+  display: inline-block;
+  background: var(--celeste);
+  color: var(--blanco);
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background: var(--rosa-intenso);
+  transform: scale(1.05);
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+  padding: 80px 0;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: var(--texto);
+}
+
+/* ===== NOSOTROS ===== */
+.about {
+  background: #f9f4ff; /* mismo pastel suave */
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--morado-oscuro);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 15px auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* MISION Y VISION */
+.mission, .vision {
+  background: #f9f4ff; /* pastel suave */
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.mission h2, .vision h2 {
+  color: var(--morado-oscuro);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.mission p, .vision p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+/* ===== EXPERIENCIAS ===== */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #f9f4ff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: var(--morado-oscuro);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.service-card .price {
+  font-size: 1.2rem;
+  color: #7b2cbf;
+  margin-bottom: 15px;
+}
+
+.service-card .btn {
+  display: inline-block;
+  background: var(--morado-claro);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.service-card .btn:hover {
+  background: var(--morado-oscuro);
+}
+
+/* ===== RESERVAS ===== */
+/* FORMULARIO DE RESERVAS */
+.formulario {
+  background: #f9f4ff;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+.formulario h3 {
+  margin-bottom: 20px;
+  color: var(--morado-oscuro);
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.formulario input, 
+.formulario select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-reserva {
+  padding: 12px;
+  background: var(--morado-claro);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-reserva:hover {
+  background: var(--morado-oscuro);
+}
+
+/* CONTACTO DIRECTO */
+.direct-contact {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5c;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--rosa-intenso);
+  color: var(--blanco);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===== BOTÓN WHATSAPP ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 14px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu { flex-direction: column; gap: 10px; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .gallery-grid img { width: 45vw; height: 45vw; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 60px 20px; }
+  .hero h1 { font-size: 1.8rem; }
+  .btn { width: 100%; text-align: center; }
+}
+
+/* Para que el footer quede abajo */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Footer */
+footer {
+  background: var(--rosa-intenso);
+  color: var(--blanco);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: auto; /* Hace que quede fijo al final */
+}
+
+/* GALERÍA */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;   /* recorta para que se vea ordenada */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
