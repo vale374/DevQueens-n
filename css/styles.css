@@ -370,3 +370,57 @@ footer {
   .btn { width: 100%; text-align: center; }
   .catalogo-grid { grid-template-columns: 1fr; }
 }
+
+/* =========================================
+   CREAR CUENTA
+========================================= */
+.crearcuenta {
+  background: var(--blanco);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 50px auto; /* centrado horizontal con espacio arriba */
+}
+
+.crearcuenta h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--morado-oscuro);
+  font-family: var(--fuente-principal);
+}
+
+.crearcuenta input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.crearcuenta input:focus {
+  border-color: var(--rosa-intenso);
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 175, 204, 0.5);
+}
+
+.crearcuenta button {
+  width: 100%;
+  padding: 12px;
+  background: var(--rosa-intenso);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.crearcuenta button:hover {
+  background: var(--morado);
+}
