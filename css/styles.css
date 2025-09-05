@@ -135,27 +135,54 @@ section h2 {
 }
 
 /* =========================================
-   SOBRE NOSOTRAS
-========================================= */
-.about, .mission, .vision {
-  background: #9e85bd;
+   SOBRE NOSOTRAs
+   ========================================= */
+.about {
+  background: #f9f4ff; /* mismo pastel suave */
   padding: 40px 20px;
   margin: 30px auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   text-align: center;
 }
-.about h2, .mission h2, .vision h2 {
-  color: var(--morado);
+
+.about h2 {
+  color: var(--morado-oscuro);
   margin-bottom: 15px;
   font-size: 1.8rem;
 }
-.about p, .mission p, .vision p {
+
+.about p {
   max-width: 800px;
   margin: 15px auto;
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
+}
+
+/* MISION Y VISION */
+.mission, .vision {
+  background: #f9f4ff; /* pastel suave */
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.mission h2, .vision h2 {
+  color: var(--morado-oscuro);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.mission p, .vision p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #000000;
 }
 
 /* =========================================
