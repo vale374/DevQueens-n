@@ -451,3 +451,8 @@ footer {
 .crearcuenta button:hover {
   background: var(--morado);
 }
+
+img {
+  width: 200px;   /* ancho */
+  height: 200px;  /* alto */
+}
