@@ -456,3 +456,12 @@ img {
   width: 200px;   /* ancho */
   height: 170px;  /* alto */
 }
+
+        /* Oculta la barra de desplazamiento en el área de mensajes */
+        #chat-messages::-webkit-scrollbar {
+            display: none;
+        }
+        #chat-messages {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
