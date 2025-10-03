@@ -59,6 +59,53 @@
 
   <footer>
     Aquí encuentras lo que necesitas.
+
+        <!-- Contenedor del Chatbot Flotante -->
+    <div class="fixed bottom-6 right-6 z-50">
+
+        <!-- Ventana del Chatbot (Inicialmente oculta) -->
+        <div id="chatbot-window" class="hidden w-80 md:w-96 bg-white shadow-2xl rounded-xl overflow-hidden transform transition-all duration-300">
+            
+            <!-- Encabezado del Chat -->
+            <header class="bg-dev-purple p-4 flex justify-between items-center rounded-t-xl shadow-md">
+                <div class="flex items-center">
+                    <!-- Icono circular DQ -->
+                    <div class="h-8 w-8 bg-dev-pink rounded-full flex items-center justify-center mr-2 text-white font-bold text-sm">DQ</div>
+                    <h2 class="text-white text-lg font-semibold">Devqueens Chat</h2>
+                </div>
+                <!-- Botón de cierre -->
+                <button onclick="toggleChat()" class="text-white opacity-75 hover:opacity-100 transition">
+                    <!-- Icono X para cerrar -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </header>
+
+            <!-- Área de Mensajes -->
+            <div id="chat-messages" class="h-80 p-4 space-y-4 overflow-y-auto bg-gray-50">
+                <!-- Los mensajes se insertarán aquí por JavaScript -->
+            </div>
+
+            <!-- Área de Entrada de Mensajes -->
+            <footer class="p-3 bg-white border-t border-gray-200 flex space-x-2">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje (Ej: métodos de pago)..." 
+                       class="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dev-pink text-sm"
+                       onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()" class="bg-dev-purple text-white p-2 rounded-full hover:bg-dev-pink transition duration-150 shadow-md">
+                    <!-- Icono de Enviar (Send) -->
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+            </footer>
+        </div>
+
+        <!-- Botón Flotante con Icono de Clip (paperclip) -->
+        <button id="chat-toggle-button" onclick="toggleChat()" 
+                class="bg-dev-pink text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl hover:shadow-2xl hover:bg-dev-purple transition duration-300 transform hover:scale-105 focus:outline-none">
+            <!-- Icono de Clip (paperclip) - Abierto -->
+            <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.57 6.57a4 4 0 106.57 6.57L21 12m-6.57-6.57l6.57 6.57a4 4 0 11-6.57 6.57M9.5 7.5l-3 3"></path></svg>
+            <!-- Icono de Cierre (X) - Oculto inicialmente -->
+            <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
   </footer>
 </body>
 </html>
